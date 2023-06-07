@@ -6,8 +6,8 @@ import s from "./modal.module.scss";
  */
 const Modal = (props) => {
   return (
-    <div className={s.modalContainer}>
-      <div className={s.modal}>
+    <div className={s.modalContainer} onClick={props.handleClick} >
+      <div className={s.modal} onClick={(event)=> {event.stopPropagation()}}>
         <div className={s.upPanel}>
           <p className={s.textBold}>{props.title}</p>
           {props.closeButton ? 
